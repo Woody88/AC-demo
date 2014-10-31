@@ -169,7 +169,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   coffee-rails (~> 4.0.0)
-  debugger (= 1.6.8)
+  debugger
   foundation-rails
   guard
   jbuilder (~> 2.0)
