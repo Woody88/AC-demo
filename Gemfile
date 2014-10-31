@@ -14,7 +14,6 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'minitest-reporters'
 gem 'foundation-rails'
 gem 'mini_backtrace'
-gem 'debugger'
 
 gem 'bcrypt'
 # Use jquery as the JavaScript library
@@ -25,6 +24,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
+
+gem 'byebug'
 
 group :development, :test do
   gem 'pg'
