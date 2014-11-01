@@ -11,8 +11,8 @@
   <section class="top-bar-section">
     <!-- Right Nav Section -->
     <ul class="right">
-      <li><%= link_to "Home",   '#' %></li>
-      <li><%= link_to "Help",   '#' %></li>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Help",  help_path %></li>
       <% if logged_in? %>
         <li><%= link_to "Users", "#" %></li>
         <li class="has-dropdown">
