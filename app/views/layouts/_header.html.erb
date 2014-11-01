@@ -12,14 +12,22 @@
     <!-- Right Nav Section -->
     <ul class="right">
       <li><%= link_to "Home",   '#' %></li>
-        <li><%= link_to "Help",   '#' %></li>
-        <li><%= link_to "Log in", '#' %></li>
-    </ul>
+      <li><%= link_to "Help",   '#' %></li>
+      <% if logged_in? %>
+        <li><%= link_to "Users", "#" %></li>
+        <li class="has-dropdown">
+          <%= link_to "Account", "#" %>
+          <ul class="dropdown">
+            <li><%= link_to "Profile", current_user %></li>
+            <li><%= link_to "Settings", "#" %></li>
+            <li><%= link_to "Log out", logout_path, method: :delete %></li>
 
-    <!-- Left Nav Section 
-    <ul class="left">
-      <li><a href="#">Left Nav Button</a></li>
-    </ul>-->
+          </ul>
+        </li>
+      <% else %>
+        <li><%= link_to "Log in", '#' %></li>
+      <% end %>
+    </ul>
   </section>
 </nav>
 </header> 
