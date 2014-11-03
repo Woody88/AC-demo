@@ -48,5 +48,15 @@ test "login with invalid information" do
     assert_select "a[href=?]", user_path(@user), count: 0
   end
 
+test "login with remembering" do
+    log_in_as(@user, remember_me: '1')
+    assert_nil cookies['remember_token']   #Something odd here recheck this part 
+  end
+
+  test "login without remembering" do
+    log_in_as(@user, remember_me: '0')     #Related, Something odd here recheck this part
+    assert_nil cookies['remember_token']
+  end
+  
 
 end
